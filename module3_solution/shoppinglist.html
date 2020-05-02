@@ -1,0 +1,12 @@
+<ul>
+  <li ng-repeat = "category in menu.items">
+    <b>Name: </b>{{ category.name }},<br>
+    <b>Short Name: </b>{{ category.short_name }},<br>
+    <b>Description: </b>{{ category.description }}.<br>
+    <button type="button" ng-click = "menu.onRemove({index: $index})" name="button">Don't Want this one!</button>
+  </li>
+  <br>
+</ul>
+<div class="alert alert-danger" ng-show = "menu.onEmpty">
+  {{menu.onEmpty }}
+</div>
