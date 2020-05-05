@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app = "MenuApp" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Restuarant Menu App</title>
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    </head>
+  <body>
+    <h1>Welcome To Our Restuarant Menu App</h1>
+    <button class="btn btn-outline-primary" ui-sref="home">Home</button>
+    <button class="btn btn-outline-primary" ui-sref="categories">Categories</button>
+    <ui-view></ui-view>
+
+  <!-- Lib -->
+  <script src="lib/angular.min.js" charset="utf-8"></script>
+  <script src="lib/angular-ui-router.min.js" charset="utf-8"></script>
+
+  <!-- Module  -->
+  <script src="module/menuapp.module.js" charset="utf-8"></script>
+  <script src="module/data.module.js" charset="utf-8"></script>
+
+  <!-- Controller -->
+  <script src="controller/categories.controller.js" charset="utf-8"></script>
+  <script src="controller/items.controller.js" charset="utf-8"></script>
+
+  <!-- Component -->
+  <script src="component/categories.component.js" charset="utf-8"></script>
+  <script src="component/items.component.js" charset="utf-8"></script>
+
+  <!-- Services -->
+  <script src="services/menudata.service.js" charset="utf-8"></script>
+
+  <!-- Templates -->
+
+  <!-- Routes -->
+  <script src="routes.js" charset="utf-8"></script>
+  </body>
+</html>

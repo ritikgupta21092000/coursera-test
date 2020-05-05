@@ -1,0 +1,7 @@
+<div class="">
+  <h1>Menu Categories</h1>
+    <button class="btn btn-md btn-primary" ng-repeat = "category in $ctrl.category"
+    ui-sref = "items({ categoryShortName: category.short_name, categoryName: category.name })">
+      {{ category.name }}
+    </button>
+</div>
