@@ -1,0 +1,15 @@
+<div class="" ng-if = "infoCtrl.signedUp">
+  <h1>Showing information for user.</h1>
+  <p>First name: {{infoCtrl.user.first_name}}</p>
+  <p>Last name: {{infoCtrl.user.last_name}}</p>
+  <p>Email: {{infoCtrl.user.email}}</p>
+  <p>Phone: {{infoCtrl.user.phone}}</p>
+  <p>Favorite dish: {{infoCtrl.user.favouriteDishDetail.name}}</p>
+  <p>{{infoCtrl.user.favouriteDishDetail.description}}</p>
+  <img class="img-responsive" ng-src="{{infoCtrl.apiPath}}/images/{{infoCtrl.user.favourite_dish}}.jpg" alt="{{infoCtrl.user.favoriteDishDetails.name}}" />
+</div>
+
+<div class="" ng-if = "!infoCtrl.signedUp">
+  <h4>It Seems like you have'nt Signed Up Yet..</h4>
+  <button type="submit" ui-sref = "public.signup" class="btn btn-md btn-primary" name="button">SignUp Now</button>
+</div>

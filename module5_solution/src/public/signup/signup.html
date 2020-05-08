@@ -1,0 +1,68 @@
+<fieldset>
+  <legend style="font-size: 5rem; text-align: center; color: #fff;">Sign Up for NewsLetter that will never come..</legend>
+  <form class="form-group" name = "regForm" novalidate>
+
+    <label>First Name: </label>
+    <br>
+    <input type="text" class="form-control" name="first_name"
+    ng-model = "signupCtrl.user.first_name"
+    required>
+    <br>
+    <span ng-if = "(regForm.first_name.$touched && regForm.first_name.$error.required)">
+      Please Enter Your First Name
+    </span>
+    <br>
+
+    <label>Last Name: </label>
+    <br>
+    <input type="text" class="form-control" name="last_name"
+    ng-model = "signupCtrl.user.last_name"
+    required>
+    <br>
+    <span ng-if = "(regForm.last_name.$touched && regForm.last_name.$error.required)">
+      Please Enter Your Last Name
+    </span>
+    <br>
+
+    <label>Email Address: </label>
+    <br>
+    <input type="email" class="form-control" name="email"
+    ng-model = "signupCtrl.user.email"
+    required>
+    <br>
+    <span ng-if = "(regForm.email.$invalid && regForm.email.$touched)">
+      Please Enter a Valid Email Id
+    </span>
+    <br>
+
+    <label>Phone No: </label>
+    <br>
+    <input type="text" class="form-control" name="phone"
+    ng-model = "signupCtrl.user.phone"
+    pattern="(\d{10})"
+    required>
+    <br>
+    <span ng-if = "(regForm.phone.$invalid && regForm.phone.$touched)">
+      Please Enter a Valid Phone No
+    </span>
+    <br>
+
+    <label>Favourite Dish: </label>
+    <br>
+    <input type="text" class="form-control" name="favourite_dish"
+    ng-model = "signupCtrl.user.favourite_dish"
+    required>
+    <br>
+
+    <button type="submit" class="btn btn-md btn-primary" name="button"
+    ng-disabled = "regForm.$invalid"
+    ng-click = "signupCtrl.submitForm(signupCtrl.user.favourite_dish);">Submit</button>
+
+  </form>
+  <div ng-if = "signupCtrl.completed">
+    <p>Thanks For Subscribing</p>
+  </div>
+  <div ng-if = "signupCtrl.errorMessage">
+    <p>That Item Does not exist</p>
+  </div>
+</fieldset>
